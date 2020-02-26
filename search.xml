@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2020-02-26</title>
+    <url>/2020/02/26/2020-02-26/</url>
+    <content><![CDATA[<p><strong>pearson相关系数</strong></p>
+<p><img src="../picture/pearson%E5%85%AC%E5%BC%8F.png" alt="avatar"></p>
+<p>公式定义为： 两个连续变量(X,Y)的pearson相关性系数(Px,y)等于它们之间的协方差cov(X,Y)除以它们各自标准差的乘积(σX,σY)。系数的取值总是在-1.0到1.0之间，接近0的变量被成为无相关性，接近1或者-1被称为具有强相关性。</p>
+<p>简单来说，它用来衡量两个数据集合是否在一条线上面，是否有相关性，这在数据分析中是很有效的。</p>
+<p>用python3实现：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pearson</span><span class="params">(vector1, vector2)</span>:</span></span><br><span class="line">    n = len(vector1)</span><br><span class="line">    <span class="comment">#simple sums</span></span><br><span class="line">    sum1 = sum(float(vector1[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(n))</span><br><span class="line">    sum2 = sum(float(vector2[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(n))</span><br><span class="line">    <span class="comment">#sum up the squares</span></span><br><span class="line">    sum1_pow = sum([pow(v, <span class="number">2.0</span>) <span class="keyword">for</span> v <span class="keyword">in</span> vector1])</span><br><span class="line">    sum2_pow = sum([pow(v, <span class="number">2.0</span>) <span class="keyword">for</span> v <span class="keyword">in</span> vector2])</span><br><span class="line">    <span class="comment">#sum up the products</span></span><br><span class="line">    p_sum = sum([vector1[i]*vector2[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(n)])</span><br><span class="line">    <span class="comment">#分子num，分母den</span></span><br><span class="line">    num = p_sum - (sum1*sum2/n)</span><br><span class="line">    den = math.sqrt((sum1_pow-pow(sum1, <span class="number">2</span>)/n)*(sum2_pow-pow(sum2, <span class="number">2</span>)/n))</span><br><span class="line">    <span class="keyword">if</span> den == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">return</span> num/den</span><br></pre></td></tr></table></figure>
+<p>选择两组数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vector1 &#x3D; [2, 7, 18, 88, 157, 90, 177, 570]</span><br><span class="line">vector2 &#x3D; [3, 5, 15, 90, 180, 88, 160, 580]</span><br><span class="line">print(&#39;result is: &#39; + int(pearson(vector1, vector2)))</span><br></pre></td></tr></table></figure>
+<p>运行结果为0.998，可见这两组数是高度正相关的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">result is: 0.998348748644</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;美国零售业有这样一个案例，美国沃尔玛百货将他们的纸尿裤和啤酒并排摆在一起销售，结果纸尿裤和啤酒的销量双双增长。<br>原来，美国的太太们常叮嘱她们的丈夫下班后为小孩买尿布，而丈夫们在买尿布后又随手带回了两瓶啤酒。<br>这一消费行为导致了这两件商品经常被同时购买。<br>这其实是经过数据挖掘、趋势分析后做出的决策。</p>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/AlexMerer/article/details/74908435" target="_blank" rel="noopener">统计学三大相关系数之皮尔森（pearson）相关系数</a><br>&emsp;&emsp;&emsp;<a href="https://www.jianshu.com/p/a8349052a2a0" target="_blank" rel="noopener">从啤酒和纸尿裤，你能想到什么？</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>大数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>平平淡淡的一天</title>
     <url>/2020/02/19/first_blog/</url>
     <content><![CDATA[<h1 id="我的一天："><a href="#我的一天：" class="headerlink" title="我的一天：  "></a>我的一天：  </h1><hr>
@@ -13,8 +38,11 @@
 <p><img src="../picture/first.jpg" alt="avatar"></p>
 <hr>
 ]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
       <tags>
-        <tag>github上的第一条博客</tag>
+        <tag>摸鱼随笔</tag>
       </tags>
   </entry>
 </search>
