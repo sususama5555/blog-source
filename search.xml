@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>pearson相关系数</title>
-    <url>/2020/02/26/2020-02-26/</url>
+    <url>/blog/2020/02/26/2020-02-26/</url>
     <content><![CDATA[<p><strong>pearson相关系数</strong></p>
 <p><img src="../picture/pearson%E5%85%AC%E5%BC%8F.png" alt="avatar"></p>
 <p>公式定义为： 两个连续变量(X,Y)的pearson相关性系数(Px,y)等于它们之间的协方差cov(X,Y)除以它们各自标准差的乘积(σX,σY)。系数的取值总是在-1.0到1.0之间，接近0的变量被成为无相关性，接近1或者-1被称为具有强相关性。</p>
@@ -27,7 +27,7 @@
   </entry>
   <entry>
     <title>平平淡淡的一天</title>
-    <url>/2020/02/19/first_blog/</url>
+    <url>/blog/2020/02/19/first_blog/</url>
     <content><![CDATA[<h1 id="我的一天："><a href="#我的一天：" class="headerlink" title="我的一天：  "></a>我的一天：  </h1><hr>
 <p>上午：改bug  </p>
 <hr>
